@@ -1,0 +1,625 @@
+----------------------> HTML <----------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio Digital Interativo</h1>
+        
+        <div class="category">
+            <h2>Hambúrgueres</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger1', -1)">-</button>
+                <input type="number" id="burger1-quantity" name="burger1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer Clássico">
+                <label for="burger1-quantity">
+                    <span class="item-name">Hambúrguer Clássico</span>
+                    <span class="item-description">Pão, carne, queijo, alface, tomate e molho especial.</span>
+                    <span class="item-price">R$ 15,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger2', -1)">-</button>
+                <input type="number" id="burger2-quantity" name="burger2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Cheeseburger">
+                <label for="burger2-quantity">
+                    <span class="item-name">Cheeseburger</span>
+                    <span class="item-description">Pão, carne, queijo cheddar, cebola, picles e ketchup.</span>
+                    <span class="item-price">R$ 18,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger3', -1)">-</button>
+                <input type="number" id="burger3-quantity" name="burger3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer de Frango">
+                <label for="burger3-quantity">
+                    <span class="item-name">Hambúrguer de Frango</span>
+                    <span class="item-description">Pão, frango grelhado, queijo suíço, alface e tomate.</span>
+                    <span class="item-price">R$ 17,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger4', -1)">-</button>
+                <input type="number" id="burger4-quantity" name="burger4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer Vegano">
+                <label for="burger4-quantity">
+                    <span class="item-name">Hambúrguer Triplo</span>
+                    <span class="item-description">Pão, 3 carnes, queijo, alface, tomate e molho especial.</span>
+                    <span class="item-price">R$ 19,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger5', -1)">-</button>
+                <input type="number" id="burger5-quantity" name="burger5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Double Burger">
+                <label for="burger5-quantity">
+                    <span class="item-name">Double Burger</span>
+                    <span class="item-description">Pão, duas carnes, queijo cheddar, bacon, alface e tomate.</span>
+                    <span class="item-price">R$ 22,00</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Salgados</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack1', -1)">-</button>
+                <input type="number" id="snack1-quantity" name="snack1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Coxinha">
+                <label for="snack1-quantity">
+                    <span class="item-name">Coxinha</span>
+                    <span class="item-description">Massa de batata, recheio de frango desfiado e catupiry.</span>
+                    <span class="item-price">R$ 6,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack2', -1)">-</button>
+                <input type="number" id="snack2-quantity" name="snack2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Pão de Queijo">
+                <label for="snack2-quantity">
+                    <span class="item-name">Pão de Queijo</span>
+                    <span class="item-description">Massa de polvilho e queijo minas.</span>
+                    <span class="item-price">R$ 4,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack3', -1)">-</button>
+                <input type="number" id="snack3-quantity" name="snack3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Kibe">
+                <label for="snack3-quantity">
+                    <span class="item-name">Kibe</span>
+                    <span class="item-description">Massa de trigo, carne moída e temperos árabes.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack4', -1)">-</button>
+                <input type="number" id="snack4-quantity" name="snack4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Empada de Palmito">
+                <label for="snack4-quantity">
+                    <span class="item-name">Empada de Palmito</span>
+                    <span class="item-description">Massa crocante e recheio de palmito temperado.</span>
+                    <span class="item-price">R$ 7,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack5', -1)">-</button>
+                <input type="number" id="snack5-quantity" name="snack5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Pastel de Carne">
+                <label for="snack5-quantity">
+                    <span class="item-name">Pastel de Carne</span>
+                    <span class="item-description">Massa frita, recheio de carne moída e temperos.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink1', -1)">-</button>
+                <input type="number" id="drink1-quantity" name="drink1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Refrigerante">
+                <label for="drink1-quantity">
+                    <span class="item-name">Refrigerante</span>
+                    <span class="item-description">Lata 350ml - Coca-Cola, Guaraná, Fanta.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink2', -1)">-</button>
+                <input type="number" id="drink2-quantity" name="drink2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Suco Natural">
+                <label for="drink2-quantity">
+                    <span class="item-name">Suco Natural</span>
+                    <span class="item-description">Copo 300ml - Laranja, Limão, Maracujá.</span>
+                    <span class="item-price">R$ 7,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink3', -1)">-</button>
+                <input type="number" id="drink3-quantity" name="drink3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Água">
+                <label for="drink3-quantity">
+                    <span class="item-name">Água</span>
+                    <span class="item-description">Garrafa 500ml - Mineral ou com gás.</span>
+                    <span class="item-price">R$ 3,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink4', -1)">-</button>
+                <input type="number" id="drink4-quantity" name="drink4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Cerveja">
+                <label for="drink4-quantity">
+                    <span class="item-name">Cerveja</span>
+                    <span class="item-description">Lata 350ml - Pilsen ou IPA.</span>
+                    <span class="item-price">R$ 8,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink5', -1)">-</button>
+                <input type="number" id="drink5-quantity" name="drink5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Café">
+                <label for="drink5-quantity">
+                    <span class="item-name">Café</span>
+                    <span class="item-description">Copo 200ml - Expresso ou com leite.</span>
+                    <span class="item-price">R$ 4,00</span>
+                </label>
+            </div>
+        </div>
+        
+        <button class="cart-button" onclick="toggleCart()">Carrinho</button>
+        <div id="cart" class="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <div class="cart-footer">
+                <span class="total-price">Total: R$ <span id="cart-total">0.00</span></span>
+                <button class="add-more-btn" onclick="toggleCart()">Adicionar Mais Itens</button>
+                <button class="finalize-btn" onclick="showAdditionalInfoModal()">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Informações Adicionais -->
+    <div id="additional-info-modal" class="modal">
+        <div class="modal-content">
+            <h2>Informações Adicionais</h2>
+            <form id="additional-info-form">
+                <label for="payment-method">Forma de Pagamento:</label>
+                <div>
+                    <input type="checkbox" id="credit-card" name="payment-method" value="Cartão de Crédito">
+                    <label for="credit-card">Cartão de Crédito</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="debit-card" name="payment-method" value="Cartão de Débito">
+                    <label for="debit-card">Cartão de Débito</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pix" name="payment-method" value="Pix">
+                    <label for="pix">Pix</label>
+                </div>
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" name="full-name" required>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+                <button type="button" onclick="viewOrder()">Visualizar Pedido</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal de Resumo do Pedido -->
+    <div id="order-summary-modal" class="modal">
+        <div class="modal-content">
+            <h2>Resumo do Pedido</h2>
+            <div id="order-summary"></div>
+            <button onclick="confirmOrder()">Confirmar Pedido</button>
+            <button onclick="closeOrderSummary()">Cancelar Pedido</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+----------------------> JAVASCRIPT <----------------------
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Recuperar quantidades salvas no localStorage
+    const quantities = JSON.parse(localStorage.getItem('quantities')) || {};
+    
+    // Atualizar quantidades iniciais nos inputs
+    for (const [itemId, quantity] of Object.entries(quantities)) {
+        const inputElement = document.getElementById(`${itemId}-quantity`);
+        if (inputElement) {
+            inputElement.value = quantity;
+        }
+    }
+    
+    // Atualizar o carrinho inicial
+    updateCart();
+});
+
+function changeQuantity(itemId, change) {
+    const inputElement = document.getElementById(`${itemId}-quantity`);
+    const currentQuantity = parseInt(inputElement.value);
+    const newQuantity = currentQuantity + change;
+    if (newQuantity >= 0) {
+        inputElement.value = newQuantity;
+        
+        // Salvar quantidades no localStorage
+        const quantities = JSON.parse(localStorage.getItem('quantities')) || {};
+        quantities[itemId] = newQuantity;
+        localStorage.setItem('quantities', JSON.stringify(quantities));
+        
+        // Atualizar o carrinho
+        updateCart();
+    }
+}
+
+function updateCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const quantities = JSON.parse(localStorage.getItem('quantities')) || {};
+    let cartItems = '';
+    let cartTotal = 0;
+
+    const itemsData = {
+        burger1: { name: 'Hambúrguer Clássico', price: 15 },
+        burger2: { name: 'Cheeseburger', price: 18 },
+        burger3: { name: 'Hambúrguer de Frango', price: 17 },
+        burger4: { name: 'Hambúrguer Triplo', price: 19 },
+        burger5: { name: 'Double Burger', price: 22 },
+        snack1: { name: 'Coxinha', price: 6 },
+        snack2: { name: 'Pão de Queijo', price: 4 },
+        snack3: { name: 'Kibe', price: 5 },
+        snack4: { name: 'Empada de Palmito', price: 7 },
+        snack5: { name: 'Pastel de Carne', price: 5 },
+        drink1: { name: 'Refrigerante', price: 5 },
+        drink2: { name: 'Suco Natural', price: 7 },
+        drink3: { name: 'Água', price: 3 },
+        drink4: { name: 'Cerveja', price: 8 },
+        drink5: { name: 'Café', price: 4 }
+    };
+
+    for (const [itemId, quantity] of Object.entries(quantities)) {
+        if (quantity > 0) {
+            const itemData = itemsData[itemId];
+            cartItems += `<li>${itemData.name} x ${quantity} - R$ ${(itemData.price * quantity).toFixed(2)}</li>`;
+            cartTotal += itemData.price * quantity;
+        }
+    }
+
+    cartItemsContainer.innerHTML = cartItems;
+    document.getElementById('cart-total').textContent = cartTotal.toFixed(2);
+}
+
+function toggleCart() {
+    const cart = document.getElementById('cart');
+    if (cart.style.display === 'none' || cart.style.display === '') {
+        cart.style.display = 'block';
+    } else {
+        cart.style.display = 'none';
+    }
+}
+
+function showAdditionalInfoModal() {
+    document.getElementById('additional-info-modal').style.display = 'block';
+}
+
+function viewOrder() {
+    const form = document.getElementById('additional-info-form');
+    const paymentMethods = Array.from(form.elements['payment-method'])
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value)
+        .join(', ');
+
+    if (form.checkValidity() && paymentMethods) {
+        const fullName = form.elements['full-name'].value;
+        const address = form.elements['address'].value;
+
+        const summaryHtml = `
+            <p><strong>Nome Completo:</strong> ${fullName}</p>
+            <p><strong>Endereço:</strong> ${address}</p>
+            <p><strong>Forma de Pagamento:</strong> ${paymentMethods}</p>
+            <h3>Itens do Pedido</h3>
+            ${document.getElementById('cart-items').innerHTML}
+            <p><strong>Total:</strong> R$ ${document.getElementById('cart-total').textContent}</p>
+        `;
+
+        document.getElementById('order-summary').innerHTML = summaryHtml;
+        document.getElementById('additional-info-modal').style.display = 'none';
+        document.getElementById('order-summary-modal').style.display = 'block';
+    } else {
+        if (!paymentMethods) {
+            alert('Por favor, selecione uma forma de pagamento.');
+        }
+        form.reportValidity();
+    }
+}
+
+function confirmOrder() {
+    alert('Pedido confirmado!');
+    // Zerar localStorage e atualizar o carrinho
+    localStorage.removeItem('quantities');
+    updateCart();
+    // Fechar todos os modais e reiniciar a página
+    document.getElementById('order-summary-modal').style.display = 'none';
+    document.getElementById('additional-info-modal').style.display = 'none';
+    location.reload();
+}
+
+function closeOrderSummary() {
+    alert('Pedido cancelado!');
+    // Zerar localStorage e atualizar o carrinho
+    localStorage.removeItem('quantities');
+    updateCart();
+    // Fechar o modal de resumo do pedido
+    document.getElementById('order-summary-modal').style.display = 'none';
+}
+
+----------------------> CSS <----------------------
+
+/* style.css */
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #ffeeba;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #d9534f;
+    font-size: 2.5em;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category h2 {
+    color: #d9534f;
+    font-size: 2em;
+    border-bottom: 2px solid #d9534f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.item label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.quantity-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #c9302c;
+}
+
+input[type="number"] {
+    width: 40px;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cart-button {
+    position: fixed;
+    top: 395px;
+    right: 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-button:hover {
+    background-color: #c9302c;
+}
+
+.cart {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    z-index: 999;
+}
+
+.cart h2 {
+    margin: 0;
+    padding: 0;
+    color: #d9534f;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.add-more-btn,
+.finalize-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-more-btn:hover,
+.finalize-btn:hover {
+    background-color: #c9302c;
+}
+
+
+
+
+
+/* Adicione essas regras ao seu CSS existente */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffeeba;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #d9534f;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    color: #d9534f;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.modal-content button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #c9302c;
+}

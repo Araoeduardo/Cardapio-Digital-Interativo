@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio Digital Interativo</h1>
+        
+        <div class="category">
+            <h2>Hambúrgueres</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger1', -1)">-</button>
+                <input type="number" id="burger1-quantity" name="burger1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer Clássico">
+                <label for="burger1-quantity">
+                    <span class="item-name">Hambúrguer Clássico</span>
+                    <span class="item-description">Pão, carne, queijo, alface, tomate e molho especial.</span>
+                    <span class="item-price">R$ 15,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger2', -1)">-</button>
+                <input type="number" id="burger2-quantity" name="burger2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Cheeseburger">
+                <label for="burger2-quantity">
+                    <span class="item-name">Cheeseburger</span>
+                    <span class="item-description">Pão, carne, queijo cheddar, cebola, picles e ketchup.</span>
+                    <span class="item-price">R$ 18,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger3', -1)">-</button>
+                <input type="number" id="burger3-quantity" name="burger3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer de Frango">
+                <label for="burger3-quantity">
+                    <span class="item-name">Hambúrguer de Frango</span>
+                    <span class="item-description">Pão, frango grelhado, queijo suíço, alface e tomate.</span>
+                    <span class="item-price">R$ 17,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger4', -1)">-</button>
+                <input type="number" id="burger4-quantity" name="burger4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Hambúrguer Vegano">
+                <label for="burger4-quantity">
+                    <span class="item-name">Hambúrguer Triplo</span>
+                    <span class="item-description">Pão, 3 carnes, queijo, alface, tomate e molho especial.</span>
+                    <span class="item-price">R$ 19,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('burger5', -1)">-</button>
+                <input type="number" id="burger5-quantity" name="burger5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('burger5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Double Burger">
+                <label for="burger5-quantity">
+                    <span class="item-name">Double Burger</span>
+                    <span class="item-description">Pão, duas carnes, queijo cheddar, bacon, alface e tomate.</span>
+                    <span class="item-price">R$ 22,00</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Salgados</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack1', -1)">-</button>
+                <input type="number" id="snack1-quantity" name="snack1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Coxinha">
+                <label for="snack1-quantity">
+                    <span class="item-name">Coxinha</span>
+                    <span class="item-description">Massa de batata, recheio de frango desfiado e catupiry.</span>
+                    <span class="item-price">R$ 6,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack2', -1)">-</button>
+                <input type="number" id="snack2-quantity" name="snack2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Pão de Queijo">
+                <label for="snack2-quantity">
+                    <span class="item-name">Pão de Queijo</span>
+                    <span class="item-description">Massa de polvilho e queijo minas.</span>
+                    <span class="item-price">R$ 4,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack3', -1)">-</button>
+                <input type="number" id="snack3-quantity" name="snack3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Kibe">
+                <label for="snack3-quantity">
+                    <span class="item-name">Kibe</span>
+                    <span class="item-description">Massa de trigo, carne moída e temperos árabes.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack4', -1)">-</button>
+                <input type="number" id="snack4-quantity" name="snack4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Empada de Palmito">
+                <label for="snack4-quantity">
+                    <span class="item-name">Empada de Palmito</span>
+                    <span class="item-description">Massa crocante e recheio de palmito temperado.</span>
+                    <span class="item-price">R$ 7,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('snack5', -1)">-</button>
+                <input type="number" id="snack5-quantity" name="snack5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('snack5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Pastel de Carne">
+                <label for="snack5-quantity">
+                    <span class="item-name">Pastel de Carne</span>
+                    <span class="item-description">Massa frita, recheio de carne moída e temperos.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink1', -1)">-</button>
+                <input type="number" id="drink1-quantity" name="drink1-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink1', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Refrigerante">
+                <label for="drink1-quantity">
+                    <span class="item-name">Refrigerante</span>
+                    <span class="item-description">Lata 350ml - Coca-Cola, Guaraná, Fanta.</span>
+                    <span class="item-price">R$ 5,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink2', -1)">-</button>
+                <input type="number" id="drink2-quantity" name="drink2-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink2', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Suco Natural">
+                <label for="drink2-quantity">
+                    <span class="item-name">Suco Natural</span>
+                    <span class="item-description">Copo 300ml - Laranja, Limão, Maracujá.</span>
+                    <span class="item-price">R$ 7,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink3', -1)">-</button>
+                <input type="number" id="drink3-quantity" name="drink3-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink3', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Água">
+                <label for="drink3-quantity">
+                    <span class="item-name">Água</span>
+                    <span class="item-description">Garrafa 500ml - Mineral ou com gás.</span>
+                    <span class="item-price">R$ 3,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink4', -1)">-</button>
+                <input type="number" id="drink4-quantity" name="drink4-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink4', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Cerveja">
+                <label for="drink4-quantity">
+                    <span class="item-name">Cerveja</span>
+                    <span class="item-description">Lata 350ml - Pilsen ou IPA.</span>
+                    <span class="item-price">R$ 8,00</span>
+                </label>
+            </div>
+            <div class="item">
+                <button class="quantity-btn" onclick="changeQuantity('drink5', -1)">-</button>
+                <input type="number" id="drink5-quantity" name="drink5-quantity" min="0" value="0" readonly>
+                <button class="quantity-btn" onclick="changeQuantity('drink5', 1)">+</button>
+                <img src="https://via.placeholder.com/150" alt="Café">
+                <label for="drink5-quantity">
+                    <span class="item-name">Café</span>
+                    <span class="item-description">Copo 200ml - Expresso ou com leite.</span>
+                    <span class="item-price">R$ 4,00</span>
+                </label>
+            </div>
+        </div>
+        
+        <button class="cart-button" onclick="toggleCart()">Carrinho</button>
+        <div id="cart" class="cart">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <div class="cart-footer">
+                <span class="total-price">Total: R$ <span id="cart-total">0.00</span></span>
+                <button class="add-more-btn" onclick="toggleCart()">Adicionar Mais Itens</button>
+                <button class="finalize-btn" onclick="showAdditionalInfoModal()">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Informações Adicionais -->
+    <div id="additional-info-modal" class="modal">
+        <div class="modal-content">
+            <h2>Informações Adicionais</h2>
+            <form id="additional-info-form">
+                <label for="payment-method">Forma de Pagamento:</label>
+                <div>
+                    <input type="checkbox" id="credit-card" name="payment-method" value="Cartão de Crédito">
+                    <label for="credit-card">Cartão de Crédito</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="debit-card" name="payment-method" value="Cartão de Débito">
+                    <label for="debit-card">Cartão de Débito</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pix" name="payment-method" value="Pix">
+                    <label for="pix">Pix</label>
+                </div>
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" name="full-name" required>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+                <button type="button" onclick="viewOrder()">Visualizar Pedido</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal de Resumo do Pedido -->
+    <div id="order-summary-modal" class="modal">
+        <div class="modal-content">
+            <h2>Resumo do Pedido</h2>
+            <div id="order-summary"></div>
+            <button onclick="confirmOrder()">Confirmar Pedido</button>
+            <button onclick="closeOrderSummary()">Cancelar Pedido</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

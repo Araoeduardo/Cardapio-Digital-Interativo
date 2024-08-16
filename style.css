@@ -1,0 +1,242 @@
+/* style.css */
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #ffeeba;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #d9534f;
+    font-size: 2.5em;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category h2 {
+    color: #d9534f;
+    font-size: 2em;
+    border-bottom: 2px solid #d9534f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.item label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-description {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.quantity-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #c9302c;
+}
+
+input[type="number"] {
+    width: 40px;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cart-button {
+    position: fixed;
+    top: 395px;
+    right: 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-button:hover {
+    background-color: #c9302c;
+}
+
+.cart {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    z-index: 999;
+}
+
+.cart h2 {
+    margin: 0;
+    padding: 0;
+    color: #d9534f;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.add-more-btn,
+.finalize-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-more-btn:hover,
+.finalize-btn:hover {
+    background-color: #c9302c;
+}
+
+
+
+
+
+/* Adicione essas regras ao seu CSS existente */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffeeba;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #d9534f;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    color: #d9534f;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.modal-content button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #c9302c;
+}
